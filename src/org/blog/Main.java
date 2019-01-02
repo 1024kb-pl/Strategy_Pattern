@@ -1,16 +1,19 @@
 package org.blog;
 
-import org.blog.posts.model.Article;
-import org.blog.posts.model.PublishMethod;
-import org.blog.posts.service.ArticleService;
+import org.blog.sort.SortFacade;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        ArticleService articleService = new ArticleService();
+        SortFacade sortFacade = new SortFacade();
 
-        Article article = new Article("Java 8 features", "Lorem impsum....");
+        List<Integer> numbers = new LinkedList<>(Arrays.asList(1, -1, -120, 3, 4, 9, 10, 12, 9, 5, -3));
 
-        articleService.publishArticle(article, PublishMethod.PUBLISH_TOMORROW);
+        System.out.println(sortFacade.sortByBubbleSort(numbers));
+        System.out.println(sortFacade.sortByMergeSort(numbers));
     }
 }
