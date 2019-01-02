@@ -1,8 +1,5 @@
 package org.blog.sort.strategies;
 
-import org.blog.sort.SortStrategy;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

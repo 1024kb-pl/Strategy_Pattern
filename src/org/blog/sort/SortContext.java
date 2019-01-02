@@ -1,16 +1,18 @@
 package org.blog.sort;
 
+import org.blog.sort.strategies.SortStrategy;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class SortContext{
+public class SortContext{
     private final SortStrategy sortStrategy;
 
-    SortContext(SortStrategy sortStrategy) {
+    public SortContext(SortStrategy sortStrategy) {
         this.sortStrategy = sortStrategy;
     }
 
-    List<Integer> sortNumbers(List<Integer> numbers) {
+    public List<Integer> sortNumbers(List<Integer> numbers) {
         List<Integer> copyOfList = new ArrayList<>(numbers);
         return sortStrategy.sort(copyOfList);
     }

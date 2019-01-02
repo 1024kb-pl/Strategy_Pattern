@@ -1,4 +1,4 @@
-package org.blog.sort;
+package org.blog.sort.strategies;
 
 import java.util.ArrayList;
 import java.util.List;
