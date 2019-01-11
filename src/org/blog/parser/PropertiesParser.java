@@ -4,6 +4,7 @@ import org.blog.Properties;
 import org.blog.PropertiesKey;
 import org.blog.parser.strategy.PropertyBaseUrlParserStrategy;
 import org.blog.parser.strategy.PropertyParserStrategy;
+import org.blog.parser.strategy.PropertyPortParserStrategy;
 import org.blog.parser.strategy.PropertyTimeoutParserStrategy;
 
 import java.util.EnumMap;
@@ -16,7 +17,7 @@ public class PropertiesParser {
     public PropertiesParser() {
         parserStrategies.put(PropertiesKey.BASE_URL, new PropertyBaseUrlParserStrategy());
         parserStrategies.put(PropertiesKey.TIMEOUT, new PropertyTimeoutParserStrategy());
-        parserStrategies.put(PropertiesKey.PORT, new PropertyTimeoutParserStrategy());
+        parserStrategies.put(PropertiesKey.PORT, new PropertyPortParserStrategy());
     }
 
     public Properties parse(List<String> lines) {
