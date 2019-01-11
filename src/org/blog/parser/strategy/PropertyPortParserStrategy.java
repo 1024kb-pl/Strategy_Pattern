@@ -5,7 +5,7 @@ import org.blog.Properties;
 public class PropertyPortParserStrategy implements PropertyParserStrategy {
     @Override
     public Properties parse(String value, Properties properties) {
-        properties.setPort(value);
+        properties.setPort(Integer.valueOf(value));
         return properties;
     }
 }

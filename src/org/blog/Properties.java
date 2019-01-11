@@ -2,7 +2,7 @@ package org.blog;
 
 public class Properties {
     private String baseUrl = "http://1024kb.pl/";
-    private String port = "8080";
+    private int port = 8080;
     private int timeout = 10000;
 
     public Properties() {
@@ -13,7 +13,7 @@ public class Properties {
         return baseUrl;
     }
 
-    public String getPort() {
+    public int getPort() {
         return port;
     }
 
@@ -25,7 +25,7 @@ public class Properties {
         this.baseUrl = baseUrl;
     }
 
-    public void setPort(String port) {
+    public void setPort(int port) {
         this.port = port;
     }
 
